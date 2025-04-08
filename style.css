@@ -1,0 +1,132 @@
+/* ================= Наташа | meDEC8 стили =============== */
+
+.intro-section {
+  position: relative;
+  height: 100vh; /* занимает весь экран */
+  background-color: #111320;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.intro-text {
+  flex: 1;
+  z-index: 2;
+}
+
+.intro-text h1 {
+  font-size: 56px;
+  color: #ffbb00;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-size: 22px;
+  line-height: 1.7;
+  color: #dddddd;
+  margin-bottom: 30px;
+}
+
+.intro-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffbb00;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.intro-button:hover {
+  background-color: #ffbb00;
+  color: #111320;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  z-index: 1;
+  max-width: 50%; /* Ограничим ширину блока с картинкой */
+}
+
+.intro-image img {
+  max-height: 90vh;  /* чтобы точно не вылезала за экран */
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  transform: translateX(0); /* убираем сильный сдвиг */
+}
+
+.shiver-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0d0f1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffbb00;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #ffbb00;
+    transition: 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    color: #ffbb00;
+  }
+  
+  .nav-menu a:hover::after {
+    width: 100%;
+  }
+  
+  /* ================= Зарина | zaringa стили =============== */
+
+
+
+  /* ================= Паша | flmdev meDEC8 стили =============== */
