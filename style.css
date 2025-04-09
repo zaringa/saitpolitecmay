@@ -2,47 +2,51 @@
 
 .intro-section {
   position: relative;
-  height: 100vh; /* занимает весь экран */
+  height: calc(100vh - 100px);
   background-color: #111320;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
   overflow: hidden;
-  display: flex;
-  align-items: center;
 }
 
+/* Только текст */
 .intro-content {
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
   padding: 40px 60px;
+  max-width: 1200px;
   box-sizing: border-box;
+  z-index: 2;
+  position: relative;
 }
+
 
 .intro-text {
-  flex: 1;
-  z-index: 2;
+  max-width: 600px;
 }
 
-.intro-text h1 {
-  font-size: 56px;
-  color: #ffbb00;
-  margin-bottom: 20px;
+
+.intro-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: calc(100vh - 100px);
+  width: auto;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.intro-text p {
-  font-size: 22px;
-  line-height: 1.7;
-  color: #dddddd;
-  margin-bottom: 30px;
+.intro-image img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
+/* Кнопка */
 .intro-button {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 12px 24px;
   background-color: transparent;
   color: #ffffff;
   border: 2px solid #ffbb00;
@@ -50,6 +54,7 @@
   text-decoration: none;
   font-size: 16px;
   transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .intro-button:hover {
@@ -57,34 +62,35 @@
   color: #111320;
 }
 
-.intro-image {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 100%;
-  z-index: 1;
-  max-width: 50%; /* Ограничим ширину блока с картинкой */
+
+.intro-text h1 {
+  font-size: 48px;
+  color: #ffbb00;
+  margin-bottom: 20px;
 }
 
-.intro-image img {
-  max-height: 90vh;  /* чтобы точно не вылезала за экран */
-  max-width: 100%;
-  width: auto;
-  object-fit: contain;
-  transform: translateX(0); /* убираем сильный сдвиг */
+.intro-text p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #dddddd;
+  margin-bottom: 30px;
 }
+
+
+
 
 .shiver-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #0d0f1a;
-    color: #ffffff;
-    font-family: 'Segoe UI', sans-serif;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  height: 100px;
+  background-color: #0d0f1a;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
   
   .logo {
     font-size: 28px;
