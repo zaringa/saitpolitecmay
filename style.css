@@ -13,15 +13,195 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: #0d0f1a;
+  background-image:
+    url("imgs/noise.png"),
+    radial-gradient(circle at 20% 30%, rgba(0, 4, 255, 0.08), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(255, 153, 0, 0.103), transparent 60%);
+  background-blend-mode: screen;
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: auto, cover, cover;
+}
+
+.features h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ffbb00;
+  margin: 10px auto 20px;
+  border-radius: 2px;
+}
+
+.about-container h1, 
+.about-container h2 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 42px;
+  color: #ffbb00;
+  text-shadow: 0 0 8px #ffbb00aa, 0 0 18px #ffbb00aa;
+}
+
+.about-container section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-container section:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.about-container section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.about-container section:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.about-container {
+  font-family: 'Segoe UI', sans-serif;
+  color: #dddddd;
+  padding: 60px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.about-container h1,
+.about-container h2 {
+  color: #ffbb00;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.about-container ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.about-container ul li {
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #cccccc;
+}
+
+.intro {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.intro .lead {
+  font-size: 20px;
+  color: #bbbbbb;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+.features {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.features h2 {
+  color: #ffbb00;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70psx;
+  margin-bottom: 15px;
+  filter: brightness(1.2) drop-shadow(0 0 3px #ffbb00aa);
+}
+
+.feature-card {
+  background-color: #111320;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  flex: 1 1 280px;
+  max-width: 300px;
+  color: #dddddd;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: #ffbb00;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #bbbbbb;
+}
+
+.project-goal {
+  margin-bottom: 60px;
+}
+
+.large-image {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.big-img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
 .intro-section {
   position: relative;
   height: 91vh; 
-  background-color: #111320;
+
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
   overflow: hidden;
 }
-
 
 .intro-content {
   height: 100%;
@@ -33,7 +213,6 @@ html, body {
   z-index: 2;
   position: relative;
 }
-
 
 .intro-text {
   max-width: 600px;
@@ -71,7 +250,6 @@ html, body {
   color: #111320;
 }
 
-
 .intro-text h1 {
   font-size: 48px;
   color: #ffbb00;
@@ -85,7 +263,6 @@ html, body {
   margin-bottom: 30px;
 }
 
-
 .shiver-header {
   display: flex;
   justify-content: space-between;
@@ -98,48 +275,49 @@ html, body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
 }
-  
-  .logo {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #ffbb00;
-  }
-  
-  .nav-menu {
-    display: flex;
-    gap: 30px;
-  }
-  
-  .nav-menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-menu a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: -5px;
-    background-color: #ffbb00;
-    transition: 0.3s;
-  }
-  
-  .nav-menu a:hover {
-    color: #ffbb00;
-  }
-  
-  .nav-menu a:hover::after {
-    width: 100%;
-  }
-  
-  /* ================= Зарина | zaringa стили =============== */
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffbb00;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #ffbb00;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ffbb00;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* ================= Зарина | zaringa стили =============== */
+
+/* ================= Паша | flmdev стили =============== */
 
 
 
-  /* ================= Паша | flmdev meDEC8 стили =============== */
