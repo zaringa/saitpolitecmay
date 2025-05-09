@@ -13,16 +13,16 @@ body {
   background-image:
   radial-gradient(circle at 20% 30%, #0f105805, transparent 60%),
   radial-gradient(circle at 80% 70%, rgba(255, 153, 0, 0.178), transparent 60%);
-  background-size: cover;               /* растягивает фон на весь экран */
-  background-attachment: fixed;         /* фон зафиксирован и не двигается */
-  background-repeat: no-repeat;         /* фон не повторяется */
+  background-size: cover;              
+  background-attachment: fixed;         
+  background-repeat: no-repeat;         
   background-position: center center;
-  position: relative; /* для использования псевдоэлемента */
+  position: relative; 
   font-family: 'Segoe UI', sans-serif;
   color: #f1f1f1;
 }
 
-/* Добавляем полупрозрачную картинку через псевдоэлемент */
+
 body.snowy-page::before {
   content: "";
   position: absolute;
@@ -34,8 +34,8 @@ body.snowy-page::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  opacity: 0.02; /* полупрозрачность */
-  z-index: -1; /* отправляем картинку за контент */
+  opacity: 0.02;
+  z-index: -1;
 }
 
 
